@@ -21,5 +21,13 @@
 		<div class="embedded-video">
 		</div>
 	</section>
+</body>
 
+<script type="text/javascript">
+	var timer = setInterval(myTimer, 1000);
+	function myTimer() {
+		var date = new Date();
+		document.getElementById("timer").innerHTML = date.toLocaleTimeString();
+	}
+</script>
 </html>
