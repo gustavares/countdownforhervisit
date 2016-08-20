@@ -27,7 +27,26 @@
 	var timer = setInterval(myTimer, 1000);
 	function myTimer() {
 		var date = new Date();
-		document.getElementById("timer").innerHTML = date.toLocaleTimeString();
+		var timeLeft;
+		var finalDate = {
+			month: 11,
+			day: 21,
+			hours: 7,
+			minutes: 50,
+			seconds: 0
+		}
+
+		var month = date.getMonth();
+		var day = date.getDate();
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var seconds = date.getSeconds();
+
+		
+
+
+		document.getElementById("timer").innerHTML = timeLeft;
 	}
+
 </script>
 </html>
