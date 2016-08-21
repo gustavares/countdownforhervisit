@@ -27,7 +27,15 @@
 	var timer = setInterval(myTimer, 1000);
 	function myTimer() {
 		var date = new Date();
-		var timeLeft;
+		
+		var timeLeft = {
+			months: 0,
+			days: 0,
+			hours: 0,
+			minutes: 0,
+			seconds: 0
+		}
+
 		var finalDate = {
 			month: 11,
 			day: 21,
@@ -36,16 +44,41 @@
 			seconds: 0
 		}
 
-		var month = date.getMonth();
-		var day = date.getDate();
-		var hours = date.getHours();
-		var minutes = date.getMinutes();
-		var seconds = date.getSeconds();
+		var currentDate = {
+			month: date.getMonth(),
+		 	day: date.getDate(),
+		 	hours: date.getHours(),
+		 	minutes: date.getMinutes(),
+		 	seconds: date.getSeconds()
+		}
 
+		var secondsInADay = 86400;
+		var daysLeft = 0;
+
+		if (currentDate.month != 11) {
+			if (currentDate.month === 7) {
+				daysLeft = 31 - currentDate.day;
+				daysLeft += 91;
+			} else if (currentDate.month === 8) { 
+				daysLeft = 30 - currentDate.day;
+				daysLeft += 61;
+			} else if (currentDate.month === 9) {
+				daysLeft = 31 - currentDate.day;
+				daysLeft += 30;
+			} else if (currentDate.month === 10) {
+				daysLeft = 30 - currentDate.day;
+			}
+			daysLeft += 21;
+		} else {
+			daysLeft = finalDate.day - currentDate.day;
+		}
+	
 		
-
-
-		document.getElementById("timer").innerHTML = timeLeft;
+		// months left
+		timeLeft.months = finalDate.month - currentDate.month; 
+		
+		document.getElementById("timer").innerHTML = timeLeft.months;
+		document.getElementById("RJ-clock").innerHTML = daysLeft;
 	}
 
 </script>
