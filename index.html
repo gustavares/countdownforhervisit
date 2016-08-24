@@ -53,6 +53,7 @@
 		}
 
 		var secondsInADay = 86400;
+		var minutesInADay = 1440;
 		var daysLeft = 0;
 
 		if (currentDate.month != 11) {
@@ -72,13 +73,16 @@
 		} else {
 			daysLeft = finalDate.day - currentDate.day;
 		}
-	
+
+		var hoursLeft = currentDate.hours - finalDate.hours;
+		var minutesLeft = currentDate.minutes - finalDate.minutes;
+		
+		
 		
 		// months left
 		timeLeft.months = finalDate.month - currentDate.month; 
 		
-		document.getElementById("timer").innerHTML = timeLeft.months;
-		document.getElementById("RJ-clock").innerHTML = daysLeft;
+		document.getElementById("timer").innerHTML = daysLeft;
 	}
 
 </script>
