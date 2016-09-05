@@ -2,11 +2,12 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body>
 	<section class="top">
 		<div id="timer">
-			
 		</div>
 	</section>
 	
@@ -59,13 +60,13 @@
 		if (currentDate.month != 11) {
 			if (currentDate.month === 7) {
 				daysLeft = 31 - currentDate.day;
-				daysLeft += 91;
+				daysLeft += 90;
 			} else if (currentDate.month === 8) { 
 				daysLeft = 30 - currentDate.day;
-				daysLeft += 61;
+				daysLeft += 60;
 			} else if (currentDate.month === 9) {
 				daysLeft = 31 - currentDate.day;
-				daysLeft += 30;
+				daysLeft += 29;
 			} else if (currentDate.month === 10) {
 				daysLeft = 30 - currentDate.day;
 			}

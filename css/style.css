@@ -1,11 +1,28 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Quicksand";
+}
+
 section {
 
 }
 
-#timer {
-
+.top {
+	width: 100%;
+	background-color: #B19CD9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
 }
 
-.top {
-
+#timer {
+	width: 500px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	background-color: #779ECB;
+	font-size: 60px;
+	font-style: oblique;
 }
