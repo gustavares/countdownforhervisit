@@ -68,36 +68,6 @@
      		<img src="images/19.jpg">
    		</div>
    		<div>
-     		<img src="images/20.jpg">
-   		</div>
-   		<div>
-     		<img src="images/21.jpg">
-   		</div>
-   		<div>
-     		<img src="images/22.jpg">
-   		</div>
-   		<div>
-     		<img src="images/23.jpg">
-   		</div>
-   		<div>
-     		<img src="images/24.jpg">
-   		</div>
-   		<div>
-     		<img src="images/25.jpg">
-   		</div>
-   		<div>
-     		<img src="images/26.jpg">
-   		</div>
-   		<div>
-     		<img src="images/27.jpg">
-   		</div>
-   		<div>
-     		<img src="images/28.jpg">
-   		</div>
-   		<div>
-     		<img src="images/29.jpg">
-   		</div>
-   		<div>
      		<img src="images/30.jpg">
    		</div>
    		<div>
@@ -128,7 +98,7 @@
      		<img src="images/39.jpg">
    		</div>
 	</div>
-
+ 
 	<section class="top">
 		<div id="timer">
 		</div>
@@ -136,9 +106,9 @@
 	</section>
 	
 	<section class="mid">
-		<div id="RJ-clock">
+		<div class="clock" id="RJ">
 		</div>
-		<div id="OH-clock">
+		<div class="clock" id="OH">
 		</div>
 	</section>
 
@@ -195,8 +165,17 @@
 		
 		// months left
 		timeLeft.months = finalDate.month - currentDate.month; 
+
+		var formattedCurrentDate = currentDate.hours   + ':' +
+								   currentDate.minutes + ':' +
+								   currentDate.seconds;
 		
+		document.getElementById("RJ").innerHTML = formattedCurrentDate;
 		document.getElementById("timer").innerHTML = daysLeft;
+	}
+
+	function rjTime() {
+
 	}
 	</script>
 	
